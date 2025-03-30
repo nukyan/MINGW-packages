@@ -1,0 +1,14 @@
+_realname=gpsim
+pkgbase=mingw-w64-${_realname}
+pkgname=("${MINGW_PACKAGE_PREFIX}-${_realname}")
+pkgver=0.32.0
+pkgrel=1
+pkgdesc='Full-featured software simulator for Microchip PIC microcontrollers (mingw-w64)'
+arch=('any')
+mingw_arch=('mingw64' 'ucrt64' 'clang64' 'clangarm64')
+url='https://gpsim.sourceforge.net'
+license=('spdx:GPL-2.0-or-later AND LGPL-2.1-or-later')
+depends=()
+makedepends=()
+source=("https://downloads.sourceforge.net/${_realname}/${_realname}-${pkgver}.tar.gz")
+sha256sums=()
