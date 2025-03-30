@@ -1,0 +1,15 @@
+_realname=sdcc
+pkgbase=mingw-w64-${_realname}
+pkgname=("${MINGW_PACKAGE_PREFIX}-${_realname}")
+pkgver=4.5.0
+pkgrel=1
+pkgdesc='Small Device C Compiler (mingw-w64)'
+arch=('any')
+mingw_arch=('mingw64' 'ucrt64' 'clang64' 'clangarm64')
+url='https://sdcc.sourceforge.net'
+license=('spdx:GPL-2.0-or-later')
+depends=("${MINGW_PACKAGE_PREFIX}-cc"
+    "${MINGW_PACKAGE_PREFIX}-boost")
+makedepends=("${MINGW_PACKAGE_PREFIX}-python")
+source=("https://downloads.sourceforge.net/${_realname}/${_realname}-src-${pkgver}.tar.bz2")
+sha256sums=()
