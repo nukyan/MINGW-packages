@@ -13,3 +13,8 @@ depends=("${MINGW_PACKAGE_PREFIX}-cc"
 makedepends=("${MINGW_PACKAGE_PREFIX}-python")
 source=("https://downloads.sourceforge.net/${_realname}/${_realname}-src-${pkgver}.tar.bz2")
 sha256sums=()
+
+build() {
+    local gputils_lib=$(cygpath -wm ${MINGW_PREFIX}/share/gputils)
+    export GPUTILS_HEADER_PATH=${gputils_lib}/header GPUTILS_LKR_PATH=${gputils_lib}/lkr
+}
